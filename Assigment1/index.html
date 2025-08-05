@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Stylish Calculator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1> Simple Calculator</h1>
+    <form method="POST">
+      <input type="number" name="num1" placeholder="Enter first number" required>
+      <input type="number" name="num2" placeholder="Enter second number" required>
+      <div class="buttons">
+        <button name="operation" value="add">+</button>
+        <button name="operation" value="sub">−</button>
+        <button name="operation" value="mul">×</button>
+        <button name="operation" value="div">÷</button>
+      </div>
+    </form>
+    {% if result != "" %}
+      <div class="result">Result: {{ result }}</div>
+    {% endif %}
+  </div>
+</body>
+</html>
